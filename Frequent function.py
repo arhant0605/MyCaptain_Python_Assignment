@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 29 03:14:54 2023
-
-@author: hp
-"""
-
 def most_frequent(input_string):
     char_frequency = {}
     for char in input_string:
