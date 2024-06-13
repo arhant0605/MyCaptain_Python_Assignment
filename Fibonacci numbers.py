@@ -1,21 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Sep 30 20:22:13 2023
-
-@author: hp
-"""
-
-def genrate_fibonacci(n):
+def generate_fibonacci(n):
     fibonacci_sequence = [0, 1]
-    while len(fibonacci_sequence) < n:
+    while len(fibonacci_sequence) < n+2:
         next_number = fibonacci_sequence[-1] + fibonacci_sequence[-2]
         fibonacci_sequence.append(next_number)
 
-    return fibonacci_sequence[:n]   
+    return fibonacci_sequence[2:n+2]
 
-n_terms = 10
-fibonacci_result = genrate_fibonacci(n_terms)
-print(f"The first {n_terms} Fibonacci numbers are: {fibonacci_result}")
-
-
+ 
+n_terms = int(input("Enter no of fibonacci terms needed :"))
+if n_terms <= 0:
+        raise ValueError("The number of terms must be a positive integer.")
+fibonacci_result = generate_fibonacci(n_terms) 
+print(f"the first {n_terms} fibonacci numbers are: {fibonacci_result}")
         
