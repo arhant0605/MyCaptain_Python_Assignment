@@ -7,5 +7,5 @@ def most_frequent(input_string):
     for char, frequency in sorted_frequency:
         print(f"{char} = {frequency:02d}")
 
-input_string = "Misssissippi"
+input_string = input("Enter the word :")
 most_frequent(input_string)
